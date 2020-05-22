@@ -127,7 +127,7 @@ public class Sedes extends javax.swing.JInternalFrame {
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel4.setText("Estatus Sede:");
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 236, -1, -1));
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 250, -1, -1));
 
         txt_estatus.setBackground(new java.awt.Color(204, 255, 255));
         txt_estatus.setBorder(javax.swing.BorderFactory.createEtchedBorder());
@@ -136,7 +136,7 @@ public class Sedes extends javax.swing.JInternalFrame {
                 txt_estatusActionPerformed(evt);
             }
         });
-        getContentPane().add(txt_estatus, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 236, 111, -1));
+        getContentPane().add(txt_estatus, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 250, 111, -1));
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel5.setText("Ingresa el código de Sede: ");
