@@ -259,19 +259,19 @@ public class Asignacion_cursos_maestros extends javax.swing.JInternalFrame {
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
-        cbx_carrera = new javax.swing.JComboBox<>();
+        cbx_carrera = new javax.swing.JComboBox<String>();
         lbl_carrera = new javax.swing.JLabel();
-        cbx_sede = new javax.swing.JComboBox<>();
+        cbx_sede = new javax.swing.JComboBox<String>();
         lbl_sede = new javax.swing.JLabel();
-        cbx_jornada = new javax.swing.JComboBox<>();
+        cbx_jornada = new javax.swing.JComboBox<String>();
         lbl_jornada = new javax.swing.JLabel();
-        cbx_seccion = new javax.swing.JComboBox<>();
+        cbx_seccion = new javax.swing.JComboBox<String>();
         lbl_seccion = new javax.swing.JLabel();
         lbl_aula = new javax.swing.JLabel();
-        cbx_aula = new javax.swing.JComboBox<>();
-        cbx_curso = new javax.swing.JComboBox<>();
+        cbx_aula = new javax.swing.JComboBox<String>();
+        cbx_curso = new javax.swing.JComboBox<String>();
         lbl_curso = new javax.swing.JLabel();
-        cbx_maestro = new javax.swing.JComboBox<>();
+        cbx_maestro = new javax.swing.JComboBox<String>();
         lbl_maestro = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         tbl_asignacion = new javax.swing.JTable();
@@ -283,21 +283,27 @@ public class Asignacion_cursos_maestros extends javax.swing.JInternalFrame {
         setIconifiable(true);
         setTitle("Asignación Cursos a Maestros");
         setVisible(true);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel2.setText("Codigo Carrera:");
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 170, -1, -1));
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel3.setText("Codigo Sede:");
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 200, -1, -1));
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel4.setText("Codigo Jornada:");
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 230, -1, -1));
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel5.setText("Ingresa el código de Maestro: ");
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 10, -1, -1));
 
         txt_buscar.setBackground(new java.awt.Color(204, 255, 255));
         txt_buscar.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        getContentPane().add(txt_buscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, 530, 30));
 
         jButton4.setBackground(new java.awt.Color(141, 141, 208));
         jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/busquedap.png"))); // NOI18N
@@ -309,6 +315,7 @@ public class Asignacion_cursos_maestros extends javax.swing.JInternalFrame {
                 jButton4ActionPerformed(evt);
             }
         });
+        getContentPane().add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 20, 60, 50));
 
         jButton1.setBackground(new java.awt.Color(141, 141, 208));
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/guardarp.png"))); // NOI18N
@@ -317,6 +324,7 @@ public class Asignacion_cursos_maestros extends javax.swing.JInternalFrame {
                 jButton1ActionPerformed(evt);
             }
         });
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 80, -1, -1));
 
         jButton2.setBackground(new java.awt.Color(141, 141, 208));
         jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/editar.png"))); // NOI18N
@@ -325,6 +333,7 @@ public class Asignacion_cursos_maestros extends javax.swing.JInternalFrame {
                 jButton2ActionPerformed(evt);
             }
         });
+        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 80, 60, 40));
 
         jButton3.setBackground(new java.awt.Color(141, 141, 208));
         jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/eliminar.png"))); // NOI18N
@@ -333,18 +342,23 @@ public class Asignacion_cursos_maestros extends javax.swing.JInternalFrame {
                 jButton3ActionPerformed(evt);
             }
         });
+        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 80, 60, 40));
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel6.setText("Codigo Seccion:");
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 260, -1, -1));
 
         jLabel7.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel7.setText("Codigo Aula:");
+        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 282, -1, -1));
 
         jLabel8.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel8.setText("Codigo Curso:");
+        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 307, -1, -1));
 
         jLabel9.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel9.setText("Codigo Maestro:");
+        getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 335, -1, -1));
 
         cbx_carrera.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -356,8 +370,10 @@ public class Asignacion_cursos_maestros extends javax.swing.JInternalFrame {
                 cbx_carreraActionPerformed(evt);
             }
         });
+        getContentPane().add(cbx_carrera, new org.netbeans.lib.awtextra.AbsoluteConstraints(178, 170, 130, -1));
 
         lbl_carrera.setText("Codigo");
+        getContentPane().add(lbl_carrera, new org.netbeans.lib.awtextra.AbsoluteConstraints(338, 173, -1, -1));
 
         cbx_sede.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -369,8 +385,10 @@ public class Asignacion_cursos_maestros extends javax.swing.JInternalFrame {
                 cbx_sedeActionPerformed(evt);
             }
         });
+        getContentPane().add(cbx_sede, new org.netbeans.lib.awtextra.AbsoluteConstraints(178, 198, 130, -1));
 
         lbl_sede.setText("Codigo");
+        getContentPane().add(lbl_sede, new org.netbeans.lib.awtextra.AbsoluteConstraints(338, 201, -1, -1));
 
         cbx_jornada.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -382,8 +400,10 @@ public class Asignacion_cursos_maestros extends javax.swing.JInternalFrame {
                 cbx_jornadaActionPerformed(evt);
             }
         });
+        getContentPane().add(cbx_jornada, new org.netbeans.lib.awtextra.AbsoluteConstraints(178, 226, 130, -1));
 
         lbl_jornada.setText("Codigo");
+        getContentPane().add(lbl_jornada, new org.netbeans.lib.awtextra.AbsoluteConstraints(338, 229, -1, -1));
 
         cbx_seccion.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -395,10 +415,13 @@ public class Asignacion_cursos_maestros extends javax.swing.JInternalFrame {
                 cbx_seccionActionPerformed(evt);
             }
         });
+        getContentPane().add(cbx_seccion, new org.netbeans.lib.awtextra.AbsoluteConstraints(178, 254, 130, -1));
 
         lbl_seccion.setText("Codigo");
+        getContentPane().add(lbl_seccion, new org.netbeans.lib.awtextra.AbsoluteConstraints(338, 257, -1, -1));
 
         lbl_aula.setText("Codigo");
+        getContentPane().add(lbl_aula, new org.netbeans.lib.awtextra.AbsoluteConstraints(338, 285, -1, -1));
 
         cbx_aula.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -410,6 +433,7 @@ public class Asignacion_cursos_maestros extends javax.swing.JInternalFrame {
                 cbx_aulaActionPerformed(evt);
             }
         });
+        getContentPane().add(cbx_aula, new org.netbeans.lib.awtextra.AbsoluteConstraints(178, 282, 130, -1));
 
         cbx_curso.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -421,8 +445,10 @@ public class Asignacion_cursos_maestros extends javax.swing.JInternalFrame {
                 cbx_cursoActionPerformed(evt);
             }
         });
+        getContentPane().add(cbx_curso, new org.netbeans.lib.awtextra.AbsoluteConstraints(178, 307, 130, -1));
 
         lbl_curso.setText("Codigo");
+        getContentPane().add(lbl_curso, new org.netbeans.lib.awtextra.AbsoluteConstraints(338, 310, -1, -1));
 
         cbx_maestro.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -434,8 +460,10 @@ public class Asignacion_cursos_maestros extends javax.swing.JInternalFrame {
                 cbx_maestroActionPerformed(evt);
             }
         });
+        getContentPane().add(cbx_maestro, new org.netbeans.lib.awtextra.AbsoluteConstraints(178, 335, 130, -1));
 
         lbl_maestro.setText("Codigo");
+        getContentPane().add(lbl_maestro, new org.netbeans.lib.awtextra.AbsoluteConstraints(338, 335, -1, -1));
 
         tbl_asignacion.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -455,140 +483,15 @@ public class Asignacion_cursos_maestros extends javax.swing.JInternalFrame {
         });
         jScrollPane1.setViewportView(tbl_asignacion);
 
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(474, 162, 654, 124));
+
         jButton5.setText("Listar Datos");
         jButton5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton5ActionPerformed(evt);
             }
         });
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(10, 10, 10)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(200, 200, 200)
-                                .addComponent(jLabel5))
-                            .addComponent(txt_buscar, javax.swing.GroupLayout.PREFERRED_SIZE, 530, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(190, 190, 190)
-                        .addComponent(jButton1)
-                        .addGap(15, 15, 15)
-                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(10, 10, 10)
-                        .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(20, 20, 20)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel2)
-                            .addComponent(jLabel3)
-                            .addComponent(jLabel4)
-                            .addComponent(jLabel6)
-                            .addComponent(jLabel8)
-                            .addComponent(jLabel9)
-                            .addComponent(jLabel7))
-                        .addGap(44, 44, 44)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(cbx_carrera, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(cbx_sede, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(cbx_jornada, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(cbx_seccion, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(cbx_curso, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(30, 30, 30)
-                                .addComponent(lbl_curso))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(cbx_maestro, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(30, 30, 30)
-                                .addComponent(lbl_maestro))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(cbx_aula, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(30, 30, 30)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(lbl_aula)
-                                    .addComponent(lbl_seccion)
-                                    .addComponent(lbl_jornada)
-                                    .addComponent(lbl_sede)
-                                    .addComponent(lbl_carrera))))
-                        .addGap(103, 103, 103)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 654, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton5))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(10, 10, 10)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel5)
-                        .addGap(13, 13, 13)
-                        .addComponent(txt_buscar, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(10, 10, 10)
-                        .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(10, 10, 10)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jButton1)
-                            .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(49, 49, 49)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel2)
-                                .addGap(13, 13, 13)
-                                .addComponent(jLabel3)
-                                .addGap(13, 13, 13)
-                                .addComponent(jLabel4)
-                                .addGap(13, 13, 13)
-                                .addComponent(jLabel6))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(cbx_carrera, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(lbl_carrera))
-                                .addGap(8, 8, 8)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(cbx_sede, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(lbl_sede))
-                                .addGap(8, 8, 8)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(cbx_jornada, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(lbl_jornada))
-                                .addGap(8, 8, 8)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(cbx_seccion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(lbl_seccion))
-                                .addGap(8, 8, 8)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(cbx_aula, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(lbl_aula)
-                                    .addComponent(jLabel7))
-                                .addGap(4, 4, 4)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(cbx_curso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(lbl_curso)
-                                    .addComponent(jButton5)
-                                    .addComponent(jLabel8))
-                                .addGap(6, 6, 6)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                        .addComponent(cbx_maestro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(jLabel9))
-                                    .addComponent(lbl_maestro)))))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 88, Short.MAX_VALUE)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(237, 237, 237))))
-        );
+        getContentPane().add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(474, 306, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

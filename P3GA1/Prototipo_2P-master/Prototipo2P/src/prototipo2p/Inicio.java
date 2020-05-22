@@ -36,6 +36,7 @@ public class Inicio extends javax.swing.JFrame {
     private Asignacion_cursos_maestros ventana_as1;
     private Notas ventana_notas;
     private Ingreso_Notas ventana_ingreso;
+    private M_TipoNota ventana_tn;
     
     public Inicio() {
         initComponents();
@@ -66,6 +67,7 @@ public class Inicio extends javax.swing.JFrame {
         jMenuItem10 = new javax.swing.JMenuItem();
         jMenuItem11 = new javax.swing.JMenuItem();
         jMenuItem12 = new javax.swing.JMenuItem();
+        jMenuItem18 = new javax.swing.JMenuItem();
         jMenuItem13 = new javax.swing.JMenuItem();
         jMenuItem14 = new javax.swing.JMenuItem();
         jMenu3 = new javax.swing.JMenu();
@@ -152,6 +154,14 @@ public class Inicio extends javax.swing.JFrame {
             }
         });
         jMenu1.add(jMenuItem12);
+
+        jMenuItem18.setText("Tipo Nota");
+        jMenuItem18.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem18ActionPerformed(evt);
+            }
+        });
+        jMenu1.add(jMenuItem18);
 
         jMenuItem13.setText("Alumnos");
         jMenuItem13.addActionListener(new java.awt.event.ActionListener() {
@@ -437,6 +447,18 @@ public class Inicio extends javax.swing.JFrame {
         ventana_ingreso.show(); */
     }//GEN-LAST:event_jMenuItem16ActionPerformed
 
+    private void jMenuItem18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem18ActionPerformed
+        // TODO add your handling code here:
+        
+        ventana_tn= new M_TipoNota();
+       jDesktopPane1.add(ventana_tn);
+        
+        /*Dimension desktopSize = jDesktopPane1.getSize();
+        Dimension FrameSize = ventana_tn.getSize();
+        ventana_tn.setLocation((desktopSize.width - FrameSize.width)/2, (desktopSize.height- FrameSize.height)/2);
+        ventana_tn.show();*/
+    }//GEN-LAST:event_jMenuItem18ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -462,6 +484,8 @@ public class Inicio extends javax.swing.JFrame {
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(Inicio.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
 
@@ -491,6 +515,7 @@ public class Inicio extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem15;
     private javax.swing.JMenuItem jMenuItem16;
     private javax.swing.JMenuItem jMenuItem17;
+    private javax.swing.JMenuItem jMenuItem18;
     private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JMenuItem jMenuItem4;
