@@ -20,7 +20,7 @@ public class Jornadas extends javax.swing.JInternalFrame {
      */
     String BD = "jdbc:mysql://localhost/siu";
     String Usuario = "root";
-    String Clave = "admin";
+    String Clave = "6182";
 
     public Jornadas() {
         initComponents();

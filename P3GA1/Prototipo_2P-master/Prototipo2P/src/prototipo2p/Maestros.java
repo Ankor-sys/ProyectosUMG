@@ -20,7 +20,7 @@ public class Maestros extends javax.swing.JInternalFrame {
      */
     String BD = "jdbc:mysql://localhost/siu";
     String Usuario = "root";
-    String Clave = "admin";
+    String Clave = "6182";
 
     public Maestros() {
         initComponents();
@@ -280,7 +280,7 @@ public class Maestros extends javax.swing.JInternalFrame {
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/fondoMDI.jpg"))); // NOI18N
         jLabel1.setText("jLabel1");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-250, -310, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

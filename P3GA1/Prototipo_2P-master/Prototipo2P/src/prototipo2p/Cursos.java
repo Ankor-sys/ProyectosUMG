@@ -21,7 +21,7 @@ public class Cursos extends javax.swing.JInternalFrame {
      */
     String BD = "jdbc:mysql://localhost/siu";
     String Usuario = "root";
-    String Clave = "admin";
+    String Clave = "6182";
 
     public Cursos() {
         initComponents();
@@ -222,8 +222,7 @@ public class Cursos extends javax.swing.JInternalFrame {
         getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 366, 350, 130));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/fondoMDI.jpg"))); // NOI18N
-        jLabel1.setText("jLabel1");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-510, -300, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

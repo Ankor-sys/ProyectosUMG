@@ -23,7 +23,7 @@ public class Ingreso_Notas extends javax.swing.JInternalFrame {
 
     String BD = "jdbc:mysql://localhost/siu";
     String Usuario = "root";
-    String Clave = "admin";
+    String Clave = "6182";
 
     String carrera, sede, jornada, seccion, aula, curso;
     
@@ -651,7 +651,7 @@ public class Ingreso_Notas extends javax.swing.JInternalFrame {
     private void Aula() {
         try {
             Connection cn = DriverManager.getConnection(BD, Usuario, Clave);
-            PreparedStatement pst = cn.prepareStatement("select codigo_aula from asignacioncursosmastros where codigo_aula=?");
+            PreparedStatement pst = cn.prepareStatement("select codigo_aula from asignacioncursosmastros where codigo_maestro=?");
 
             pst.setString(1, txtCodigoMaestro.getText().trim());
 
@@ -674,7 +674,7 @@ public class Ingreso_Notas extends javax.swing.JInternalFrame {
     private void Curso() {
         try {
             Connection cn = DriverManager.getConnection(BD, Usuario, Clave);
-            PreparedStatement pst = cn.prepareStatement("select codigo_curso from asignacioncursosmastros where codigo_curso=?");
+            PreparedStatement pst = cn.prepareStatement("select codigo_curso from asignacioncursosmastros where codigo_maestro=?");
 
             pst.setString(1, txtCodigoMaestro.getText().trim());
 

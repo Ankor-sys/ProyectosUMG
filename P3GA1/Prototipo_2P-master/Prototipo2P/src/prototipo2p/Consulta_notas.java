@@ -20,11 +20,49 @@ public class Consulta_notas extends javax.swing.JInternalFrame {
 
     String BD = "jdbc:mysql://localhost/siu";
     String Usuario = "root";
-    String Clave = "admin";
+    String Clave = "6182";
 
     /**
      * Creates new form Consulta_notas
      */
+    
+    public void totalizar(){
+        double t=0;
+        double p=0;
+        
+        if(Tbl_notas.getRowCount()>0){
+            for(int i=0;i<Tbl_notas.getRowCount();i++){
+                p=Double.parseDouble(Tbl_notas.getValueAt(i,2).toString());
+                t+=p;
+            }
+            lbltotal.setText(String.valueOf(t));
+        }
+        else{
+            JOptionPane.showMessageDialog(null, "");
+        }
+    }
+    public void cbx_curso() {
+        //Codigo que permite consultar registros en la base de datos
+        try {
+            Connection cn = DriverManager.getConnection(BD, Usuario, Clave);
+            PreparedStatement pst = cn.prepareStatement("select distinct codigo_curso from asignacioncursosalumnos");
+
+            ResultSet rs = pst.executeQuery();
+
+            //llenar combobox para el comentaario
+            cbx_curso.addItem("Cursos");
+
+            while (rs.next()) {
+                cbx_curso.addItem(rs.getString("codigo_curso"));
+            }
+
+            rs.close();
+
+        } catch (Exception e) {
+
+        }
+    }
+
     public Consulta_notas() {
         initComponents();
     }
@@ -43,7 +81,12 @@ public class Consulta_notas extends javax.swing.JInternalFrame {
         jLabel1 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         Tbl_notas = new javax.swing.JTable();
-        jButton4 = new javax.swing.JButton();
+        cbx_curso = new javax.swing.JComboBox<>();
+        lbl_nombre = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        lbltotal = new javax.swing.JLabel();
+        jButton5 = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/fondoMDI.jpg"))); // NOI18N
         jLabel2.setText("jLabel1");
@@ -52,25 +95,27 @@ public class Consulta_notas extends javax.swing.JInternalFrame {
         setIconifiable(true);
         setTitle("Consulta Notas");
         setVisible(true);
-        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         txtBuscar.setBackground(new java.awt.Color(204, 255, 255));
         txtBuscar.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-        getContentPane().add(txtBuscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 60, 100, 30));
+        txtBuscar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtBuscarActionPerformed(evt);
+            }
+        });
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel1.setText("Ingrese su número de carnet");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 20, -1, -1));
 
         Tbl_notas.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null}
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null}
             },
             new String [] {
-                "Codigo", "Codigo Curso", "Nombre Curso", "Nombre Curso", "Tipo Nota", "Nota"
+                "Codigo Curso", "Tipo Nota", "Nota"
             }
         ));
         Tbl_notas.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -80,18 +125,92 @@ public class Consulta_notas extends javax.swing.JInternalFrame {
         });
         jScrollPane1.setViewportView(Tbl_notas);
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 120, 550, 130));
-
-        jButton4.setBackground(new java.awt.Color(141, 141, 208));
-        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/busquedap.png"))); // NOI18N
-        jButton4.setBorder(null);
-        jButton4.setBorderPainted(false);
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
+        cbx_curso.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
+                cbx_cursoActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 50, 50, 40));
+
+        lbl_nombre.setText("Nombre");
+
+        jLabel3.setText("Total");
+
+        lbltotal.setText("nota");
+
+        jButton5.setBackground(new java.awt.Color(141, 141, 208));
+        jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/busquedap.png"))); // NOI18N
+        jButton5.setBorder(null);
+        jButton5.setBorderPainted(false);
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
+
+        jButton1.setText("Listar");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(250, 250, 250)
+                        .addComponent(jLabel1))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(70, 70, 70)
+                        .addComponent(txtBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(40, 40, 40)
+                        .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(70, 70, 70)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 550, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(70, 70, 70)
+                        .addComponent(cbx_curso, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(20, 20, 20)
+                        .addComponent(lbl_nombre, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jButton1)
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabel3)
+                        .addGap(18, 18, 18)
+                        .addComponent(lbltotal, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(160, Short.MAX_VALUE))
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addComponent(jLabel1)
+                .addGap(13, 13, 13)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addComponent(txtBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(40, 40, 40)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(cbx_curso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lbl_nombre, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(53, 53, 53)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel3)
+                            .addComponent(jButton1)
+                            .addComponent(lbltotal))))
+                .addGap(25, 25, 25)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -100,37 +219,105 @@ public class Consulta_notas extends javax.swing.JInternalFrame {
 
     }//GEN-LAST:event_Tbl_notasMouseClicked
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        try {
-            String ID = txtBuscar.getText();
+    private void txtBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtBuscarActionPerformed
+        // TODO add your handling code here:
 
+    }//GEN-LAST:event_txtBuscarActionPerformed
+
+    private void cbx_cursoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbx_cursoActionPerformed
+        // TODO add your handling code here:
+        try {
             Connection cn = DriverManager.getConnection(BD, Usuario, Clave);
-            PreparedStatement pstt4 = cn.prepareStatement("select * from notas where carnet_alumno = " + ID);
+            PreparedStatement pst = cn.prepareStatement("select nombre_curso from asignacioncursosalumnos where codigo_curso=? and carnet_alumno=?");
+            pst.setString(1, cbx_curso.getSelectedItem().toString());
+            pst.setString(2, txtBuscar.getText().trim());
+            
+
+            ResultSet rs = pst.executeQuery();
+
+            //llenar combobox para el comentaario
+            cbx_curso.addItem("Facultad");
+            
+            if (rs.next()) {
+                lbl_nombre.setText(rs.getString("nombre_curso"));
+            }
+
+            //rs.close();
+        } catch (Exception e) {
+
+        }
+        
+        
+        try {
+            Connection cn = DriverManager.getConnection(BD, Usuario, Clave);
+
+            PreparedStatement pst2 = cn.prepareStatement("select * from cursos where codigo_curso= ?");
+            pst2.setString(1, cbx_curso.getSelectedItem().toString());
+            ResultSet rs2 = pst2.executeQuery();
+
+            if (rs2.next()) {
+                lbl_nombre.setText(rs2.getString("nombre_curso"));
+
+                
+            } else {
+
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        
+        
+        
+    }//GEN-LAST:event_cbx_cursoActionPerformed
+
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        // TODO add your handling code here:
+        cbx_curso.removeAllItems();
+        cbx_curso();
+    }//GEN-LAST:event_jButton5ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+
+        try {
+           
+            
+            Connection cn = DriverManager.getConnection(BD, Usuario, Clave);
+            PreparedStatement pstt4 = cn.prepareStatement("select codigo_curso, tipo_nota, nota_asignacioncursoalumnos from asignacioncursosalumnos where carnet_alumno=? and codigo_curso=?");
+            pstt4.setString(1, txtBuscar.getText().trim());
+            pstt4.setString(2, cbx_curso.getSelectedItem().toString());
+            
             ResultSet rss4 = pstt4.executeQuery();
 
-            PreparedStatement pstt = cn.prepareStatement("select * from notas where carnet_alumno = " + ID);
+            PreparedStatement pstt = cn.prepareStatement("select codigo_curso, tipo_nota, nota_asignacioncursoalumnos from asignacioncursosalumnos where carnet_alumno=? and codigo_curso=?");
+            pstt.setString(1, txtBuscar.getText().trim());
+            pstt.setString(2, cbx_curso.getSelectedItem().toString());
+            
             ResultSet rss = pstt.executeQuery();
-            if (rss.next()) {
+            if (rss.next()) 
+            {
                 DefaultTableModel modelo = new DefaultTableModel();
-                modelo.addColumn("codigo_notas");
-                modelo.addColumn("carnet_alumno");
                 modelo.addColumn("codigo_curso");
-                modelo.addColumn("nombre_curso");
                 modelo.addColumn("tipo_nota");
-                modelo.addColumn("nota");
+                modelo.addColumn("nota_asignacioncursoalumnos");
+                
+                 
 
                 Tbl_notas.setModel(modelo);
-                String[] dato = new String[6];
+                String[] dato = new String[3];
+                
                 while (rss4.next()) {
                     dato[0] = rss4.getString(1);
                     dato[1] = rss4.getString(2);
                     dato[2] = rss4.getString(3);
-                    dato[3] = rss4.getString(4);
-                    dato[4] = rss4.getString(5);
-                    dato[5] = rss4.getString(6);
+              
+      
 
                     modelo.addRow(dato);
+                    
                 }
+                
             }
             else{
                   JOptionPane.showMessageDialog(null, "El codigo de estudiante no existe");
@@ -139,15 +326,21 @@ public class Consulta_notas extends javax.swing.JInternalFrame {
         } catch (Exception e) {
 
         }
-    }//GEN-LAST:event_jButton4ActionPerformed
+        totalizar();
+    }//GEN-LAST:event_jButton1ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTable Tbl_notas;
-    private javax.swing.JButton jButton4;
+    private javax.swing.JComboBox<String> cbx_curso;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton5;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JLabel lbl_nombre;
+    private javax.swing.JLabel lbltotal;
     private javax.swing.JTextField txtBuscar;
     // End of variables declaration//GEN-END:variables
 

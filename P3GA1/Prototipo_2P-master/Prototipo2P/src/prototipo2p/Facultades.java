@@ -20,7 +20,7 @@ public class Facultades extends javax.swing.JInternalFrame {
      */
     String BD = "jdbc:mysql://localhost/siu";
     String Usuario = "root";
-    String Clave = "admin";
+    String Clave = "6182";
 
     public Facultades() {
         initComponents();
@@ -213,7 +213,7 @@ public class Facultades extends javax.swing.JInternalFrame {
         });
         jScrollPane1.setViewportView(tbl_facultad);
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(389, 150, -1, 110));
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 150, -1, 110));
 
         jButton5.setText("Listar Datos");
         jButton5.addActionListener(new java.awt.event.ActionListener() {
@@ -221,7 +221,7 @@ public class Facultades extends javax.swing.JInternalFrame {
                 jButton5ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(389, 278, -1, -1));
+        getContentPane().add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 270, -1, -1));
 
         jTextArea1.setBackground(new java.awt.Color(204, 204, 204));
         jTextArea1.setColumns(20);
@@ -230,11 +230,10 @@ public class Facultades extends javax.swing.JInternalFrame {
         jTextArea1.setText("                        Para modificar:\n1. Debe buscar el codigo de la Facultad\n2. Luego seleccionar la fila de la tabla \n3. Modificar los campos necesarios\n4. Darle click al boton Modificar (Icono del \n    Lápiz).");
         jScrollPane2.setViewportView(jTextArea1);
 
-        getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(389, 332, 350, 130));
+        getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 330, 350, 130));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/fondoMDI.jpg"))); // NOI18N
-        jLabel1.setText("jLabel1");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-420, -310, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

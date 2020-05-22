@@ -16,7 +16,7 @@ public class M_TipoNota extends javax.swing.JInternalFrame {
     
     String BD = "jdbc:mysql://localhost/siu";
     String Usuario = "root";
-    String Clave = "admin";
+    String Clave = "6182";
     
     public void iniciar_combo(){
         try {
