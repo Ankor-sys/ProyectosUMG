@@ -92,6 +92,7 @@ public class Facultades extends javax.swing.JInternalFrame {
         jScrollPane2 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
         jLabel1 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
 
         setClosable(true);
         setIconifiable(true);
@@ -101,10 +102,10 @@ public class Facultades extends javax.swing.JInternalFrame {
 
         jLabel2.setBackground(new java.awt.Color(255, 255, 255));
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Codigo Facultad:");
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 150, -1, -1));
 
-        txt_nombre.setBackground(new java.awt.Color(204, 255, 255));
         txt_nombre.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         txt_nombre.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -115,10 +116,10 @@ public class Facultades extends javax.swing.JInternalFrame {
 
         jLabel3.setBackground(new java.awt.Color(255, 255, 255));
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Nombre Facultad:");
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 190, -1, -1));
 
-        txt_codigo.setBackground(new java.awt.Color(204, 255, 255));
         txt_codigo.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         txt_codigo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -129,10 +130,10 @@ public class Facultades extends javax.swing.JInternalFrame {
 
         jLabel4.setBackground(new java.awt.Color(255, 255, 255));
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Estatus Facultad:");
         getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 220, -1, -1));
 
-        txt_estatus.setBackground(new java.awt.Color(204, 255, 255));
         txt_estatus.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         txt_estatus.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -143,10 +144,10 @@ public class Facultades extends javax.swing.JInternalFrame {
 
         jLabel5.setBackground(new java.awt.Color(255, 255, 255));
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("Ingresa el código de Facultades: ");
         getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 10, -1, -1));
 
-        txt_buscar.setBackground(new java.awt.Color(204, 255, 255));
         txt_buscar.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         txt_buscar.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         getContentPane().add(txt_buscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(16, 40, 530, 30));
@@ -234,6 +235,10 @@ public class Facultades extends javax.swing.JInternalFrame {
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/fondoMDI.jpg"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-420, -310, -1, -1));
+
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/f.jpeg"))); // NOI18N
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(-140, -60, 1020, 560));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -395,6 +400,7 @@ public class Facultades extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTextArea jTextArea1;

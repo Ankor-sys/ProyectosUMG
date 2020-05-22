@@ -83,6 +83,7 @@ public class Notas extends javax.swing.JInternalFrame {
         jButton6 = new javax.swing.JButton();
         jButton7 = new javax.swing.JButton();
         jButton8 = new javax.swing.JButton();
+        jLabel4 = new javax.swing.JLabel();
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/fondoMDI.jpg"))); // NOI18N
         jLabel2.setText("jLabel1");
@@ -94,6 +95,7 @@ public class Notas extends javax.swing.JInternalFrame {
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Codigo Curso:");
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(38, 279, -1, -1));
 
@@ -111,10 +113,12 @@ public class Notas extends javax.swing.JInternalFrame {
         getContentPane().add(txt_codigoalumno, new org.netbeans.lib.awtextra.AbsoluteConstraints(169, 246, 113, -1));
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("Tipo Nota: ");
         getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(38, 316, -1, -1));
 
         jLabel7.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setText("Nota (pts) : ");
         getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(38, 358, -1, -1));
 
@@ -144,7 +148,6 @@ public class Notas extends javax.swing.JInternalFrame {
         jLabel5.setText("Ingrese el Carnet alumno: ");
         jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 70, -1, -1));
 
-        txt_buscar.setBackground(new java.awt.Color(204, 255, 255));
         txt_buscar.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         txt_buscar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -220,13 +223,14 @@ public class Notas extends javax.swing.JInternalFrame {
         });
         jScrollPane1.setViewportView(Tbl_notas);
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(437, 97, 805, 98));
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 100, 805, 98));
 
         jLabel1.setText("Buscar Curso");
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1215, 604, -1, -1));
         getContentPane().add(lbl_incremento, new org.netbeans.lib.awtextra.AbsoluteConstraints(191, 54, -1, -1));
 
         jLabel10.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(255, 255, 255));
         jLabel10.setText("Carnet Alumno:");
         getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(38, 247, -1, -1));
 
@@ -237,9 +241,10 @@ public class Notas extends javax.swing.JInternalFrame {
         jTextArea1.setText("                        Para modificar:\n1. Debe buscar el carnet del alumno\n2. Luego seleccionar la fila de la tabla \n3. Modificar los campos necesarios\n4. Darle click al boton Modificar (Icono del \n    Lápiz).");
         jScrollPane2.setViewportView(jTextArea1);
 
-        getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 294, 350, 130));
+        getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 300, 350, 130));
 
         jLabel11.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel11.setForeground(new java.awt.Color(255, 255, 255));
         jLabel11.setText("Codigo Carrera:");
         getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(38, 137, -1, -1));
 
@@ -251,6 +256,7 @@ public class Notas extends javax.swing.JInternalFrame {
         getContentPane().add(cbx_sede, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 171, 111, -1));
 
         jLabel12.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel12.setForeground(new java.awt.Color(255, 255, 255));
         jLabel12.setText("Codigo Sede:");
         getContentPane().add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(38, 177, -1, -1));
 
@@ -262,6 +268,7 @@ public class Notas extends javax.swing.JInternalFrame {
         getContentPane().add(cbx_carrera, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 133, 111, -1));
 
         jLabel13.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel13.setForeground(new java.awt.Color(255, 255, 255));
         jLabel13.setText("Codigo Jornada:");
         getContentPane().add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(38, 210, -1, -1));
 
@@ -273,6 +280,7 @@ public class Notas extends javax.swing.JInternalFrame {
         getContentPane().add(cbx_jornada, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 208, 112, -1));
 
         jLabel14.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel14.setForeground(new java.awt.Color(255, 255, 255));
         jLabel14.setText("Codigo Maestro:");
         getContentPane().add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(38, 100, -1, -1));
 
@@ -294,22 +302,28 @@ public class Notas extends javax.swing.JInternalFrame {
         });
         getContentPane().add(cbx_curso, new org.netbeans.lib.awtextra.AbsoluteConstraints(169, 277, 113, -1));
 
+        lbl_sede.setForeground(new java.awt.Color(255, 255, 255));
         lbl_sede.setText("Codigo");
         getContentPane().add(lbl_sede, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 175, -1, -1));
 
+        lbl_carrera.setForeground(new java.awt.Color(255, 255, 255));
         lbl_carrera.setText("Codigo");
         getContentPane().add(lbl_carrera, new org.netbeans.lib.awtextra.AbsoluteConstraints(302, 133, -1, -1));
 
+        lbl_jornada.setForeground(new java.awt.Color(255, 255, 255));
         lbl_jornada.setText("Codigo");
         getContentPane().add(lbl_jornada, new org.netbeans.lib.awtextra.AbsoluteConstraints(302, 211, -1, -1));
 
+        lbl_nombre.setForeground(new java.awt.Color(255, 255, 255));
         lbl_nombre.setText("Nombre");
         getContentPane().add(lbl_nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 246, 100, -1));
 
+        lbl_curso.setForeground(new java.awt.Color(255, 255, 255));
         lbl_curso.setText("Nombre");
         getContentPane().add(lbl_curso, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 280, -1, -1));
 
         jLabel15.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel15.setForeground(new java.awt.Color(255, 255, 255));
         jLabel15.setText("Ingreso de Notas");
         getContentPane().add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(38, 30, -1, -1));
 
@@ -336,6 +350,10 @@ public class Notas extends javax.swing.JInternalFrame {
             }
         });
         getContentPane().add(jButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(479, 211, -1, -1));
+
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/f.jpeg"))); // NOI18N
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 0, 1290, 620));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -821,6 +839,7 @@ public class Notas extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;

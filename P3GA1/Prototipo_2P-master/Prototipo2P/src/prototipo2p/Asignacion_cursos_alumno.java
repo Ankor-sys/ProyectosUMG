@@ -284,22 +284,25 @@ public class Asignacion_cursos_alumno extends javax.swing.JInternalFrame {
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Codigo Carrera:");
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 150, -1, -1));
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Codigo Sede:");
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 178, -1, -1));
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Codigo Jornada:");
         getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 213, -1, -1));
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("Ingresa el código de Asignacion: ");
         getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 10, -1, -1));
 
-        txt_buscar.setBackground(new java.awt.Color(204, 255, 255));
         txt_buscar.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         getContentPane().add(txt_buscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, 520, 30));
 
@@ -348,18 +351,22 @@ public class Asignacion_cursos_alumno extends javax.swing.JInternalFrame {
         getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 80, 60, 40));
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("Codigo Seccion:");
         getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 241, -1, -1));
 
         jLabel7.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setText("Codigo Aula:");
         getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 276, -1, -1));
 
         jLabel8.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
         jLabel8.setText("Codigo Curso:");
         getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 306, -1, -1));
 
         jLabel9.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
         jLabel9.setText("Carnet Alumno:");
         getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 344, -1, -1));
 
@@ -375,9 +382,11 @@ public class Asignacion_cursos_alumno extends javax.swing.JInternalFrame {
         });
         getContentPane().add(cbx_seccion, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 234, 130, -1));
 
+        lbl_seccion.setForeground(new java.awt.Color(255, 255, 255));
         lbl_seccion.setText("Codigo");
         getContentPane().add(lbl_seccion, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 234, -1, -1));
 
+        lbl_aula.setForeground(new java.awt.Color(255, 255, 255));
         lbl_aula.setText("Codigo");
         getContentPane().add(lbl_aula, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 262, -1, -1));
 
@@ -405,6 +414,7 @@ public class Asignacion_cursos_alumno extends javax.swing.JInternalFrame {
         });
         getContentPane().add(cbx_curso, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 306, 130, -1));
 
+        lbl_curso.setForeground(new java.awt.Color(255, 255, 255));
         lbl_curso.setText("Codigo");
         getContentPane().add(lbl_curso, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 309, -1, -1));
 
@@ -420,6 +430,7 @@ public class Asignacion_cursos_alumno extends javax.swing.JInternalFrame {
         });
         getContentPane().add(cbx_alumno, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 344, 130, -1));
 
+        lbl_alumno.setForeground(new java.awt.Color(255, 255, 255));
         lbl_alumno.setText("Codigo");
         getContentPane().add(lbl_alumno, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 347, -1, -1));
 
@@ -463,6 +474,7 @@ public class Asignacion_cursos_alumno extends javax.swing.JInternalFrame {
         });
         getContentPane().add(cbx_sede, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 178, 130, -1));
 
+        lbl_sede.setForeground(new java.awt.Color(255, 255, 255));
         lbl_sede.setText("Codigo");
         getContentPane().add(lbl_sede, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 178, -1, -1));
 
@@ -490,14 +502,17 @@ public class Asignacion_cursos_alumno extends javax.swing.JInternalFrame {
         });
         getContentPane().add(cbx_jornada, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 206, 130, -1));
 
+        lbl_carrera.setForeground(new java.awt.Color(255, 255, 255));
         lbl_carrera.setText("Codigo");
         getContentPane().add(lbl_carrera, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 150, -1, -1));
 
+        lbl_jornada.setForeground(new java.awt.Color(255, 255, 255));
         lbl_jornada.setText("Codigo");
         getContentPane().add(lbl_jornada, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 206, -1, -1));
 
-        jLabel1.setText("jLabel1");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/f.jpeg"))); // NOI18N
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -70, 1020, 590));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

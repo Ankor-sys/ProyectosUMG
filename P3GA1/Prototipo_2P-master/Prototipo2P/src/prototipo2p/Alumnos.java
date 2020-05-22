@@ -113,10 +113,10 @@ public class Alumnos extends javax.swing.JInternalFrame {
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Carnet Alumno:");
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 140, -1, -1));
 
-        txt_nombre.setBackground(new java.awt.Color(204, 255, 255));
         txt_nombre.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         txt_nombre.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -126,10 +126,10 @@ public class Alumnos extends javax.swing.JInternalFrame {
         getContentPane().add(txt_nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 168, 111, -1));
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Nombre Alumno:");
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 170, -1, -1));
 
-        txt_codigo.setBackground(new java.awt.Color(204, 255, 255));
         txt_codigo.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         txt_codigo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -139,10 +139,10 @@ public class Alumnos extends javax.swing.JInternalFrame {
         getContentPane().add(txt_codigo, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 140, 111, -1));
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Direccion Alumo:");
         getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 200, -1, -1));
 
-        txt_direccion.setBackground(new java.awt.Color(204, 255, 255));
         txt_direccion.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         txt_direccion.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -152,10 +152,10 @@ public class Alumnos extends javax.swing.JInternalFrame {
         getContentPane().add(txt_direccion, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 196, 111, -1));
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("Ingresa el código de Alumno: ");
         getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 0, -1, -1));
 
-        txt_buscar.setBackground(new java.awt.Color(204, 255, 255));
         txt_buscar.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         getContentPane().add(txt_buscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 30, 500, 30));
 
@@ -196,10 +196,10 @@ public class Alumnos extends javax.swing.JInternalFrame {
         getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 70, -1, 40));
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("Telefono Alumno: ");
         getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 230, -1, -1));
 
-        txt_telefono.setBackground(new java.awt.Color(204, 255, 255));
         txt_telefono.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         txt_telefono.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -209,10 +209,10 @@ public class Alumnos extends javax.swing.JInternalFrame {
         getContentPane().add(txt_telefono, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 224, 111, -1));
 
         jLabel7.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setText("Email Alumno:");
         getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 260, -1, -1));
 
-        txt_email.setBackground(new java.awt.Color(204, 255, 255));
         txt_email.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         txt_email.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -222,10 +222,10 @@ public class Alumnos extends javax.swing.JInternalFrame {
         getContentPane().add(txt_email, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 260, 111, -1));
 
         jLabel8.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
         jLabel8.setText("Estatus Alumno:");
         getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 290, -1, -1));
 
-        txt_estatusalumno.setBackground(new java.awt.Color(204, 255, 255));
         txt_estatusalumno.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         txt_estatusalumno.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -252,7 +252,7 @@ public class Alumnos extends javax.swing.JInternalFrame {
         });
         jScrollPane1.setViewportView(tbl_alumno);
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 140, 600, 110));
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 130, 600, 110));
 
         jButton5.setText("Listar Datos");
         jButton5.addActionListener(new java.awt.event.ActionListener() {
@@ -260,7 +260,7 @@ public class Alumnos extends javax.swing.JInternalFrame {
                 jButton5ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 270, -1, -1));
+        getContentPane().add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 250, -1, -1));
 
         jTextArea1.setBackground(new java.awt.Color(204, 204, 204));
         jTextArea1.setColumns(20);
@@ -269,10 +269,11 @@ public class Alumnos extends javax.swing.JInternalFrame {
         jTextArea1.setText("                 Para modificar/ Eliminar:\n1. Debe buscar el carnet del alumno\n2. Luego seleccionar la fila de la tabla \n3. Modificar los campos necesarios\n4. Darle click al boton Modificar (Icono del \n    Lápiz).");
         jScrollPane2.setViewportView(jTextArea1);
 
-        getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 325, 350, 130));
+        getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 320, 350, 130));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/fondoMDI.jpg"))); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-270, -340, -1, -1));
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/f.jpeg"))); // NOI18N
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 1020, 560));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

@@ -46,8 +46,6 @@ public class Ingreso_Notas extends javax.swing.JInternalFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel13 = new javax.swing.JLabel();
-        jLabel14 = new javax.swing.JLabel();
         Panel = new javax.swing.JTabbedPane();
         panel_maestro = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
@@ -73,6 +71,7 @@ public class Ingreso_Notas extends javax.swing.JInternalFrame {
         lbl_aula = new javax.swing.JLabel();
         lbl_curso = new javax.swing.JLabel();
         btnSiguiente = new javax.swing.JButton();
+        jLabel15 = new javax.swing.JLabel();
         panel_nota = new javax.swing.JPanel();
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
@@ -85,24 +84,22 @@ public class Ingreso_Notas extends javax.swing.JInternalFrame {
         btnGuardar = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
-
-        jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/fondoMDI.jpg"))); // NOI18N
-        jLabel13.setText("jLabel1");
-
-        jLabel14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/fondoMDI.jpg"))); // NOI18N
-        jLabel14.setText("jLabel1");
+        jLabel13 = new javax.swing.JLabel();
 
         setClosable(true);
         setIconifiable(true);
         setMaximizable(true);
         setResizable(true);
+        setTitle("Ingreso de notas");
         setVisible(true);
 
         panel_maestro.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("REGISTRO:");
         panel_maestro.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(48, 34, -1, -1));
 
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("Codigo Maestro:");
         panel_maestro.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(48, 80, -1, -1));
 
@@ -121,9 +118,11 @@ public class Ingreso_Notas extends javax.swing.JInternalFrame {
         });
         panel_maestro.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(48, 103, -1, -1));
 
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Codigo Carrera:");
         panel_maestro.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(48, 155, -1, -1));
 
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Codigo Sede:");
         panel_maestro.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(48, 186, -1, -1));
 
@@ -141,6 +140,7 @@ public class Ingreso_Notas extends javax.swing.JInternalFrame {
         });
         panel_maestro.add(cbx_carrera, new org.netbeans.lib.awtextra.AbsoluteConstraints(162, 152, 101, -1));
 
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Codigo Jornada:");
         panel_maestro.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(48, 217, -1, -1));
 
@@ -151,6 +151,7 @@ public class Ingreso_Notas extends javax.swing.JInternalFrame {
         });
         panel_maestro.add(cbx_jornada, new org.netbeans.lib.awtextra.AbsoluteConstraints(164, 214, 99, -1));
 
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("Codigo Seccion:");
         panel_maestro.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(48, 255, -1, -1));
 
@@ -161,6 +162,7 @@ public class Ingreso_Notas extends javax.swing.JInternalFrame {
         });
         panel_maestro.add(cbx_seccion, new org.netbeans.lib.awtextra.AbsoluteConstraints(164, 252, 99, -1));
 
+        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setText("Codigo Aula:");
         panel_maestro.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(48, 293, -1, -1));
 
@@ -171,6 +173,7 @@ public class Ingreso_Notas extends javax.swing.JInternalFrame {
         });
         panel_maestro.add(cbx_aula, new org.netbeans.lib.awtextra.AbsoluteConstraints(164, 290, 99, -1));
 
+        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
         jLabel8.setText("Codigo Curso:");
         panel_maestro.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(48, 331, -1, -1));
 
@@ -181,21 +184,27 @@ public class Ingreso_Notas extends javax.swing.JInternalFrame {
         });
         panel_maestro.add(cbx_curso, new org.netbeans.lib.awtextra.AbsoluteConstraints(164, 328, 99, -1));
 
+        lblCarrera.setForeground(new java.awt.Color(255, 255, 255));
         lblCarrera.setText("Nombre");
         panel_maestro.add(lblCarrera, new org.netbeans.lib.awtextra.AbsoluteConstraints(273, 155, -1, -1));
 
+        lblSede.setForeground(new java.awt.Color(255, 255, 255));
         lblSede.setText("Nombre");
         panel_maestro.add(lblSede, new org.netbeans.lib.awtextra.AbsoluteConstraints(273, 186, -1, -1));
 
+        lbl_jornada.setForeground(new java.awt.Color(255, 255, 255));
         lbl_jornada.setText("Nombre");
         panel_maestro.add(lbl_jornada, new org.netbeans.lib.awtextra.AbsoluteConstraints(273, 217, -1, -1));
 
+        lbl_seccion.setForeground(new java.awt.Color(255, 255, 255));
         lbl_seccion.setText("Nombre");
         panel_maestro.add(lbl_seccion, new org.netbeans.lib.awtextra.AbsoluteConstraints(273, 255, -1, -1));
 
+        lbl_aula.setForeground(new java.awt.Color(255, 255, 255));
         lbl_aula.setText("Nombre");
         panel_maestro.add(lbl_aula, new org.netbeans.lib.awtextra.AbsoluteConstraints(273, 293, -1, -1));
 
+        lbl_curso.setForeground(new java.awt.Color(255, 255, 255));
         lbl_curso.setText("Nombre");
         panel_maestro.add(lbl_curso, new org.netbeans.lib.awtextra.AbsoluteConstraints(273, 331, -1, -1));
 
@@ -207,13 +216,19 @@ public class Ingreso_Notas extends javax.swing.JInternalFrame {
         });
         panel_maestro.add(btnSiguiente, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 370, -1, -1));
 
+        jLabel15.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/f.jpeg"))); // NOI18N
+        panel_maestro.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 1020, 560));
+
         Panel.addTab("Registro Maestro", panel_maestro);
 
         panel_nota.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
         jLabel9.setText("NOTAS:");
         panel_nota.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 70, -1, -1));
 
+        jLabel10.setForeground(new java.awt.Color(255, 255, 255));
         jLabel10.setText("Carnet Alumno:");
         panel_nota.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 120, -1, -1));
 
@@ -224,6 +239,7 @@ public class Ingreso_Notas extends javax.swing.JInternalFrame {
         });
         panel_nota.add(cbx_alumno, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 120, 120, -1));
 
+        jLabel11.setForeground(new java.awt.Color(255, 255, 255));
         jLabel11.setText("Tipo Nota:");
         panel_nota.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 160, -1, -1));
 
@@ -235,10 +251,12 @@ public class Ingreso_Notas extends javax.swing.JInternalFrame {
         });
         panel_nota.add(cbx_nota, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 160, 120, -1));
 
+        jLabel12.setForeground(new java.awt.Color(255, 255, 255));
         jLabel12.setText("Nota (pts) : ");
         panel_nota.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 200, -1, -1));
         panel_nota.add(txtNota, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 200, 120, -1));
 
+        lblTipo.setForeground(new java.awt.Color(255, 255, 255));
         lblTipo.setText("Codigo");
         panel_nota.add(lblTipo, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 160, -1, -1));
 
@@ -257,18 +275,22 @@ public class Ingreso_Notas extends javax.swing.JInternalFrame {
 
         panel_nota.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 100, 220, 150));
 
+        jLabel13.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/f.jpeg"))); // NOI18N
+        panel_nota.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 1020, 560));
+
         Panel.addTab("Ingreso Nota", panel_nota);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(Panel, javax.swing.GroupLayout.DEFAULT_SIZE, 663, Short.MAX_VALUE)
+            .addComponent(Panel)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(Panel, javax.swing.GroupLayout.DEFAULT_SIZE, 476, Short.MAX_VALUE)
+                .addComponent(Panel)
                 .addContainerGap())
         );
 
@@ -761,7 +783,7 @@ public class Ingreso_Notas extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;

@@ -287,22 +287,25 @@ public class Asignacion_cursos_maestros extends javax.swing.JInternalFrame {
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Codigo Carrera:");
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 170, -1, -1));
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Codigo Sede:");
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 200, -1, -1));
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Codigo Jornada:");
         getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 230, -1, -1));
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("Ingresa el código de Maestro: ");
         getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 10, -1, -1));
 
-        txt_buscar.setBackground(new java.awt.Color(204, 255, 255));
         txt_buscar.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         getContentPane().add(txt_buscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, 530, 30));
 
@@ -346,18 +349,22 @@ public class Asignacion_cursos_maestros extends javax.swing.JInternalFrame {
         getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 80, 60, 40));
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("Codigo Seccion:");
         getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 260, -1, -1));
 
         jLabel7.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setText("Codigo Aula:");
         getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 282, -1, -1));
 
         jLabel8.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
         jLabel8.setText("Codigo Curso:");
         getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 307, -1, -1));
 
         jLabel9.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
         jLabel9.setText("Codigo Maestro:");
         getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 335, -1, -1));
 
@@ -373,6 +380,7 @@ public class Asignacion_cursos_maestros extends javax.swing.JInternalFrame {
         });
         getContentPane().add(cbx_carrera, new org.netbeans.lib.awtextra.AbsoluteConstraints(178, 170, 130, -1));
 
+        lbl_carrera.setForeground(new java.awt.Color(255, 255, 255));
         lbl_carrera.setText("Codigo");
         getContentPane().add(lbl_carrera, new org.netbeans.lib.awtextra.AbsoluteConstraints(338, 173, -1, -1));
 
@@ -388,6 +396,7 @@ public class Asignacion_cursos_maestros extends javax.swing.JInternalFrame {
         });
         getContentPane().add(cbx_sede, new org.netbeans.lib.awtextra.AbsoluteConstraints(178, 198, 130, -1));
 
+        lbl_sede.setForeground(new java.awt.Color(255, 255, 255));
         lbl_sede.setText("Codigo");
         getContentPane().add(lbl_sede, new org.netbeans.lib.awtextra.AbsoluteConstraints(338, 201, -1, -1));
 
@@ -403,6 +412,7 @@ public class Asignacion_cursos_maestros extends javax.swing.JInternalFrame {
         });
         getContentPane().add(cbx_jornada, new org.netbeans.lib.awtextra.AbsoluteConstraints(178, 226, 130, -1));
 
+        lbl_jornada.setForeground(new java.awt.Color(255, 255, 255));
         lbl_jornada.setText("Codigo");
         getContentPane().add(lbl_jornada, new org.netbeans.lib.awtextra.AbsoluteConstraints(338, 229, -1, -1));
 
@@ -418,9 +428,11 @@ public class Asignacion_cursos_maestros extends javax.swing.JInternalFrame {
         });
         getContentPane().add(cbx_seccion, new org.netbeans.lib.awtextra.AbsoluteConstraints(178, 254, 130, -1));
 
+        lbl_seccion.setForeground(new java.awt.Color(255, 255, 255));
         lbl_seccion.setText("Codigo");
         getContentPane().add(lbl_seccion, new org.netbeans.lib.awtextra.AbsoluteConstraints(338, 257, -1, -1));
 
+        lbl_aula.setForeground(new java.awt.Color(255, 255, 255));
         lbl_aula.setText("Codigo");
         getContentPane().add(lbl_aula, new org.netbeans.lib.awtextra.AbsoluteConstraints(338, 285, -1, -1));
 
@@ -448,6 +460,7 @@ public class Asignacion_cursos_maestros extends javax.swing.JInternalFrame {
         });
         getContentPane().add(cbx_curso, new org.netbeans.lib.awtextra.AbsoluteConstraints(178, 307, 130, -1));
 
+        lbl_curso.setForeground(new java.awt.Color(255, 255, 255));
         lbl_curso.setText("Codigo");
         getContentPane().add(lbl_curso, new org.netbeans.lib.awtextra.AbsoluteConstraints(338, 310, -1, -1));
 
@@ -463,6 +476,7 @@ public class Asignacion_cursos_maestros extends javax.swing.JInternalFrame {
         });
         getContentPane().add(cbx_maestro, new org.netbeans.lib.awtextra.AbsoluteConstraints(178, 335, 130, -1));
 
+        lbl_maestro.setForeground(new java.awt.Color(255, 255, 255));
         lbl_maestro.setText("Codigo");
         getContentPane().add(lbl_maestro, new org.netbeans.lib.awtextra.AbsoluteConstraints(338, 335, -1, -1));
 
@@ -494,9 +508,9 @@ public class Asignacion_cursos_maestros extends javax.swing.JInternalFrame {
         });
         getContentPane().add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(474, 306, -1, -1));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/fondoMDI.jpg"))); // NOI18N
-        jLabel1.setText("jLabel1");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/f.jpeg"))); // NOI18N
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -180, 1140, 560));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

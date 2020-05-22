@@ -94,6 +94,7 @@ public class Cursos extends javax.swing.JInternalFrame {
         jScrollPane2 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
         jLabel1 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
 
         setClosable(true);
         setIconifiable(true);
@@ -102,10 +103,10 @@ public class Cursos extends javax.swing.JInternalFrame {
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Codigo Curso:");
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 180, -1, -1));
 
-        txt_nombre.setBackground(new java.awt.Color(204, 255, 255));
         txt_nombre.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         txt_nombre.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -115,10 +116,10 @@ public class Cursos extends javax.swing.JInternalFrame {
         getContentPane().add(txt_nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 218, 111, -1));
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Nombre Curso:");
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 220, -1, -1));
 
-        txt_codigo.setBackground(new java.awt.Color(204, 255, 255));
         txt_codigo.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         txt_codigo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -128,10 +129,10 @@ public class Cursos extends javax.swing.JInternalFrame {
         getContentPane().add(txt_codigo, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 180, 111, -1));
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Estatus Curso:");
         getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 260, -1, -1));
 
-        txt_estatus.setBackground(new java.awt.Color(204, 255, 255));
         txt_estatus.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         txt_estatus.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -141,10 +142,10 @@ public class Cursos extends javax.swing.JInternalFrame {
         getContentPane().add(txt_estatus, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 256, 111, -1));
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("Ingresa el código de curso: ");
         getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 10, -1, -1));
 
-        txt_buscar.setBackground(new java.awt.Color(204, 255, 255));
         txt_buscar.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         getContentPane().add(txt_buscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(16, 40, 530, 30));
 
@@ -223,6 +224,10 @@ public class Cursos extends javax.swing.JInternalFrame {
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/fondoMDI.jpg"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-510, -300, -1, -1));
+
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/f.jpeg"))); // NOI18N
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(-230, -50, 1020, 560));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -383,6 +388,7 @@ public class Cursos extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTextArea jTextArea1;
