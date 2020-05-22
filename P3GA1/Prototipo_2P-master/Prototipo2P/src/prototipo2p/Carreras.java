@@ -24,7 +24,7 @@ public class Carreras extends javax.swing.JInternalFrame {
      */
     String BD = "jdbc:mysql://localhost/siu";
     String Usuario = "root";
-    String Clave = "Cagada1234";
+    String Clave = "admin";
 
     public Carreras() {
         initComponents();

@@ -20,7 +20,7 @@ public class Asignacion_cursos_alumno extends javax.swing.JInternalFrame {
      */
     String BD = "jdbc:mysql://localhost/siu";
     String Usuario = "root";
-    String Clave = "Cagada1234";
+    String Clave = "admin";
 
 
     public Asignacion_cursos_alumno() {
@@ -496,7 +496,6 @@ public class Asignacion_cursos_alumno extends javax.swing.JInternalFrame {
         lbl_jornada.setText("Codigo");
         getContentPane().add(lbl_jornada, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 206, -1, -1));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/fondoMDI.jpg"))); // NOI18N
         jLabel1.setText("jLabel1");
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 

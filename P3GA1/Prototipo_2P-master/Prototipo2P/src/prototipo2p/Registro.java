@@ -99,7 +99,7 @@ public class Registro extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
 try{
-            Connection cn = DriverManager.getConnection("jdbc:mysql://localhost/siu", "root", "Cagada1234");
+            Connection cn = DriverManager.getConnection("jdbc:mysql://localhost/siu", "root", "admin");
             //localhost es 127.0.0.1
             PreparedStatement pst2 = cn.prepareStatement("insert into usuarios values(?,?)");
             

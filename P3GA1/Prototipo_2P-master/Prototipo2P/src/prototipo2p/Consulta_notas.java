@@ -20,7 +20,7 @@ public class Consulta_notas extends javax.swing.JInternalFrame {
 
     String BD = "jdbc:mysql://localhost/siu";
     String Usuario = "root";
-    String Clave = "Cagada1234";
+    String Clave = "admin";
 
     /**
      * Creates new form Consulta_notas
@@ -80,7 +80,7 @@ public class Consulta_notas extends javax.swing.JInternalFrame {
         });
         jScrollPane1.setViewportView(Tbl_notas);
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 120, 550, 130));
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 120, 550, 130));
 
         jButton4.setBackground(new java.awt.Color(141, 141, 208));
         jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/busquedap.png"))); // NOI18N

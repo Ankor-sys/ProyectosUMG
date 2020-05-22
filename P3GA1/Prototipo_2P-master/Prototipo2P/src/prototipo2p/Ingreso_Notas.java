@@ -11,6 +11,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
+import javafx.scene.layout.Pane;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.JOptionPane;
 
@@ -22,16 +23,19 @@ public class Ingreso_Notas extends javax.swing.JInternalFrame {
 
     String BD = "jdbc:mysql://localhost/siu";
     String Usuario = "root";
-    String Clave = "Cagada1234";
+    String Clave = "admin";
 
     String carrera, sede, jornada, seccion, aula, curso;
-
+    
+  
     /**
      * Creates new form Ingreso_Notas
      */
     public Ingreso_Notas() {
         initComponents();
+        
     }
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -44,8 +48,8 @@ public class Ingreso_Notas extends javax.swing.JInternalFrame {
 
         jLabel13 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
-        jTabbedPane1 = new javax.swing.JTabbedPane();
-        jPanel1 = new javax.swing.JPanel();
+        Panel = new javax.swing.JTabbedPane();
+        panel_maestro = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         txtCodigoMaestro = new javax.swing.JTextField();
@@ -69,7 +73,7 @@ public class Ingreso_Notas extends javax.swing.JInternalFrame {
         lbl_aula = new javax.swing.JLabel();
         lbl_curso = new javax.swing.JLabel();
         btnSiguiente = new javax.swing.JButton();
-        jPanel2 = new javax.swing.JPanel();
+        panel_nota = new javax.swing.JPanel();
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
         cbx_alumno = new javax.swing.JComboBox<>();
@@ -79,6 +83,8 @@ public class Ingreso_Notas extends javax.swing.JInternalFrame {
         txtNota = new javax.swing.JTextField();
         lblTipo = new javax.swing.JLabel();
         btnGuardar = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTextArea1 = new javax.swing.JTextArea();
 
         jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/fondoMDI.jpg"))); // NOI18N
         jLabel13.setText("jLabel1");
@@ -92,20 +98,20 @@ public class Ingreso_Notas extends javax.swing.JInternalFrame {
         setResizable(true);
         setVisible(true);
 
-        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        panel_maestro.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setText("REGISTRO:");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(48, 34, -1, -1));
+        panel_maestro.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(48, 34, -1, -1));
 
         jLabel5.setText("Codigo Maestro:");
-        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(48, 80, -1, -1));
+        panel_maestro.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(48, 80, -1, -1));
 
         txtCodigoMaestro.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtCodigoMaestroActionPerformed(evt);
             }
         });
-        jPanel1.add(txtCodigoMaestro, new org.netbeans.lib.awtextra.AbsoluteConstraints(153, 77, 99, -1));
+        panel_maestro.add(txtCodigoMaestro, new org.netbeans.lib.awtextra.AbsoluteConstraints(153, 77, 99, -1));
 
         jButton1.setText("Buscar");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -113,113 +119,113 @@ public class Ingreso_Notas extends javax.swing.JInternalFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(48, 103, -1, -1));
+        panel_maestro.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(48, 103, -1, -1));
 
         jLabel2.setText("Codigo Carrera:");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(48, 155, -1, -1));
+        panel_maestro.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(48, 155, -1, -1));
 
         jLabel3.setText("Codigo Sede:");
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(48, 186, -1, -1));
+        panel_maestro.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(48, 186, -1, -1));
 
         cbx_sede.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cbx_sedeActionPerformed(evt);
             }
         });
-        jPanel1.add(cbx_sede, new org.netbeans.lib.awtextra.AbsoluteConstraints(164, 183, 99, -1));
+        panel_maestro.add(cbx_sede, new org.netbeans.lib.awtextra.AbsoluteConstraints(164, 183, 99, -1));
 
         cbx_carrera.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cbx_carreraActionPerformed(evt);
             }
         });
-        jPanel1.add(cbx_carrera, new org.netbeans.lib.awtextra.AbsoluteConstraints(162, 152, 101, -1));
+        panel_maestro.add(cbx_carrera, new org.netbeans.lib.awtextra.AbsoluteConstraints(162, 152, 101, -1));
 
         jLabel4.setText("Codigo Jornada:");
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(48, 217, -1, -1));
+        panel_maestro.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(48, 217, -1, -1));
 
         cbx_jornada.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cbx_jornadaActionPerformed(evt);
             }
         });
-        jPanel1.add(cbx_jornada, new org.netbeans.lib.awtextra.AbsoluteConstraints(164, 214, 99, -1));
+        panel_maestro.add(cbx_jornada, new org.netbeans.lib.awtextra.AbsoluteConstraints(164, 214, 99, -1));
 
         jLabel6.setText("Codigo Seccion:");
-        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(48, 255, -1, -1));
+        panel_maestro.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(48, 255, -1, -1));
 
         cbx_seccion.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cbx_seccionActionPerformed(evt);
             }
         });
-        jPanel1.add(cbx_seccion, new org.netbeans.lib.awtextra.AbsoluteConstraints(164, 252, 99, -1));
+        panel_maestro.add(cbx_seccion, new org.netbeans.lib.awtextra.AbsoluteConstraints(164, 252, 99, -1));
 
         jLabel7.setText("Codigo Aula:");
-        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(48, 293, -1, -1));
+        panel_maestro.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(48, 293, -1, -1));
 
         cbx_aula.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cbx_aulaActionPerformed(evt);
             }
         });
-        jPanel1.add(cbx_aula, new org.netbeans.lib.awtextra.AbsoluteConstraints(164, 290, 99, -1));
+        panel_maestro.add(cbx_aula, new org.netbeans.lib.awtextra.AbsoluteConstraints(164, 290, 99, -1));
 
         jLabel8.setText("Codigo Curso:");
-        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(48, 331, -1, -1));
+        panel_maestro.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(48, 331, -1, -1));
 
         cbx_curso.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cbx_cursoActionPerformed(evt);
             }
         });
-        jPanel1.add(cbx_curso, new org.netbeans.lib.awtextra.AbsoluteConstraints(164, 328, 99, -1));
+        panel_maestro.add(cbx_curso, new org.netbeans.lib.awtextra.AbsoluteConstraints(164, 328, 99, -1));
 
         lblCarrera.setText("Nombre");
-        jPanel1.add(lblCarrera, new org.netbeans.lib.awtextra.AbsoluteConstraints(273, 155, -1, -1));
+        panel_maestro.add(lblCarrera, new org.netbeans.lib.awtextra.AbsoluteConstraints(273, 155, -1, -1));
 
         lblSede.setText("Nombre");
-        jPanel1.add(lblSede, new org.netbeans.lib.awtextra.AbsoluteConstraints(273, 186, -1, -1));
+        panel_maestro.add(lblSede, new org.netbeans.lib.awtextra.AbsoluteConstraints(273, 186, -1, -1));
 
         lbl_jornada.setText("Nombre");
-        jPanel1.add(lbl_jornada, new org.netbeans.lib.awtextra.AbsoluteConstraints(273, 217, -1, -1));
+        panel_maestro.add(lbl_jornada, new org.netbeans.lib.awtextra.AbsoluteConstraints(273, 217, -1, -1));
 
         lbl_seccion.setText("Nombre");
-        jPanel1.add(lbl_seccion, new org.netbeans.lib.awtextra.AbsoluteConstraints(273, 255, -1, -1));
+        panel_maestro.add(lbl_seccion, new org.netbeans.lib.awtextra.AbsoluteConstraints(273, 255, -1, -1));
 
         lbl_aula.setText("Nombre");
-        jPanel1.add(lbl_aula, new org.netbeans.lib.awtextra.AbsoluteConstraints(273, 293, -1, -1));
+        panel_maestro.add(lbl_aula, new org.netbeans.lib.awtextra.AbsoluteConstraints(273, 293, -1, -1));
 
         lbl_curso.setText("Nombre");
-        jPanel1.add(lbl_curso, new org.netbeans.lib.awtextra.AbsoluteConstraints(273, 331, -1, -1));
+        panel_maestro.add(lbl_curso, new org.netbeans.lib.awtextra.AbsoluteConstraints(273, 331, -1, -1));
 
-        btnSiguiente.setText("Siguiente ");
+        btnSiguiente.setText("Enviar");
         btnSiguiente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnSiguienteActionPerformed(evt);
             }
         });
-        jPanel1.add(btnSiguiente, new org.netbeans.lib.awtextra.AbsoluteConstraints(124, 366, -1, -1));
+        panel_maestro.add(btnSiguiente, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 370, -1, -1));
 
-        jTabbedPane1.addTab("Registro Maestro", jPanel1);
+        Panel.addTab("Registro Maestro", panel_maestro);
 
-        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        panel_nota.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel9.setText("NOTAS:");
-        jPanel2.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(48, 24, -1, -1));
+        panel_nota.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 70, -1, -1));
 
         jLabel10.setText("Carnet Alumno:");
-        jPanel2.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(48, 74, -1, -1));
+        panel_nota.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 120, -1, -1));
 
         cbx_alumno.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cbx_alumnoActionPerformed(evt);
             }
         });
-        jPanel2.add(cbx_alumno, new org.netbeans.lib.awtextra.AbsoluteConstraints(166, 71, 120, -1));
+        panel_nota.add(cbx_alumno, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 120, 120, -1));
 
         jLabel11.setText("Tipo Nota:");
-        jPanel2.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(48, 117, -1, -1));
+        panel_nota.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 160, -1, -1));
 
         cbx_nota.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Primer Parcial", "Segundo Parcial", "Tercer Parcial", "Actividades", "Extraordinario1", "Extraordinario2", "Recuperacion" }));
         cbx_nota.addActionListener(new java.awt.event.ActionListener() {
@@ -227,14 +233,14 @@ public class Ingreso_Notas extends javax.swing.JInternalFrame {
                 cbx_notaActionPerformed(evt);
             }
         });
-        jPanel2.add(cbx_nota, new org.netbeans.lib.awtextra.AbsoluteConstraints(166, 114, 120, -1));
+        panel_nota.add(cbx_nota, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 160, 120, -1));
 
         jLabel12.setText("Nota (pts) : ");
-        jPanel2.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(48, 155, -1, -1));
-        jPanel2.add(txtNota, new org.netbeans.lib.awtextra.AbsoluteConstraints(166, 152, 120, -1));
+        panel_nota.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 200, -1, -1));
+        panel_nota.add(txtNota, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 200, 120, -1));
 
         lblTipo.setText("Codigo");
-        jPanel2.add(lblTipo, new org.netbeans.lib.awtextra.AbsoluteConstraints(296, 117, -1, -1));
+        panel_nota.add(lblTipo, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 160, -1, -1));
 
         btnGuardar.setText("Guardar");
         btnGuardar.addActionListener(new java.awt.event.ActionListener() {
@@ -242,23 +248,313 @@ public class Ingreso_Notas extends javax.swing.JInternalFrame {
                 btnGuardarActionPerformed(evt);
             }
         });
-        jPanel2.add(btnGuardar, new org.netbeans.lib.awtextra.AbsoluteConstraints(117, 190, -1, -1));
+        panel_nota.add(btnGuardar, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 240, -1, -1));
 
-        jTabbedPane1.addTab("Ingreso Nota", jPanel2);
+        jTextArea1.setColumns(20);
+        jTextArea1.setRows(5);
+        jTextArea1.setText("Si el alumno no se\npresento o no se \nrealizo el examen\ncoloque 0 pts en la \nnota para poder \nrealizarle un Examen \nExtraordinario ");
+        jScrollPane1.setViewportView(jTextArea1);
+
+        panel_nota.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 100, 220, 150));
+
+        Panel.addTab("Ingreso Nota", panel_nota);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPane1)
+            .addComponent(Panel, javax.swing.GroupLayout.DEFAULT_SIZE, 663, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPane1)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(Panel, javax.swing.GroupLayout.DEFAULT_SIZE, 476, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+   
+    
+    private void btnGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarActionPerformed
+        // TODO add your handling code here:
+
+        try {
+            Connection cn = DriverManager.getConnection(BD, Usuario, Clave);
+            String ID = cbx_alumno.getSelectedItem().toString();
+            PreparedStatement pst1 = cn.prepareStatement("select * from asignacioncursosalumnos where carnet_alumno = " + ID);
+            ResultSet rss4 = pst1.executeQuery();
+
+            if (rss4.next()) {
+                String vacio = rss4.getString("tipo_nota");
+                String Nota= rss4.getString("nota_asignacioncursoalumnos");
+                String seleccion= cbx_nota.getSelectedItem().toString();
+                
+                if (vacio.equals("0")) {
+                    PreparedStatement pst2 = cn.prepareStatement("update asignacioncursosalumnos set tipo_nota = ?, nota_asignacioncursoalumnos = ? where carnet_alumno = " + ID);
+
+                    pst2.setString(1, cbx_nota.getSelectedItem().toString());
+                    pst2.setString(2, txtNota.getText().trim());
+
+                    pst2.executeUpdate();
+
+                    JOptionPane.showMessageDialog(null, "GUARDADO CON EXITO!");
+
+                } else if (!vacio.equals("0")) {
+
+                    if (seleccion.equals("Extraordinario")) {
+                        
+                        if (vacio.equals("Primer Parcial") && !Nota.equals("0")) {
+                            JOptionPane.showMessageDialog(null, "Este Alumno no tiene derecho a un Examen Extraordinario"+ "\nYa que si se realizo el Examen");
+                        }
+                        else if(vacio.equals("Segundo Parcial") && !Nota.equals("0")){
+                            JOptionPane.showMessageDialog(null, "Este Alumno no tiene derecho a un Examen Extraordinario"+ "\nYa que si se realizo el Examen");
+                        }
+                        else
+                        {
+                        PreparedStatement pst = cn.prepareStatement("insert into asignacioncursosalumnos values(?,?,?,?,?,?,?,?,?)");
+                        pst.setString(1, cbx_carrera.getSelectedItem().toString());
+                        pst.setString(2, cbx_sede.getSelectedItem().toString());
+                        pst.setString(3, cbx_jornada.getSelectedItem().toString());
+                        pst.setString(4, cbx_seccion.getSelectedItem().toString());
+                        pst.setString(5, cbx_aula.getSelectedItem().toString());
+                        pst.setString(6, cbx_curso.getSelectedItem().toString());
+                        pst.setString(7, cbx_alumno.getSelectedItem().toString());
+                        pst.setString(8, cbx_nota.getSelectedItem().toString());
+                        pst.setString(9, txtNota.getText().trim());
+                        pst.executeUpdate();
+
+                        JOptionPane.showMessageDialog(null, "GUARDADO CON EXITO!");
+                        }
+                    }
+                    else if (seleccion.equals("Retrasada") ) {
+                    
+                    PreparedStatement pst2 = cn.prepareStatement("update asignacioncursosalumnos set tipo_nota=?, nota_asignacioncursoalumnos = ? where carnet_alumno ="+ID+" and tipo_nota=?");
+
+                    pst2.setString(1, "Retrasada");
+                    pst2.setString(2, txtNota.getText().trim());
+                    pst2.setString(3, "Final");
+
+                    pst2.executeUpdate();
+
+                    JOptionPane.showMessageDialog(null, "GUARDADO CON EXITO!");
+                        
+                    }
+
+                    else {
+                        PreparedStatement pst = cn.prepareStatement("insert into asignacioncursosalumnos values(?,?,?,?,?,?,?,?,?)");
+
+                        pst.setString(1, cbx_carrera.getSelectedItem().toString());
+                        pst.setString(2, cbx_sede.getSelectedItem().toString());
+                        pst.setString(3, cbx_jornada.getSelectedItem().toString());
+                        pst.setString(4, cbx_seccion.getSelectedItem().toString());
+                        pst.setString(5, cbx_aula.getSelectedItem().toString());
+                        pst.setString(6, cbx_curso.getSelectedItem().toString());
+                        pst.setString(7, cbx_alumno.getSelectedItem().toString());
+                        pst.setString(8, cbx_nota.getSelectedItem().toString());
+                        pst.setString(9, txtNota.getText().trim());
+                        pst.executeUpdate();
+
+                        JOptionPane.showMessageDialog(null, "GUARDADO CON EXITO!");
+                    }
+                }
+            }
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+
+    }//GEN-LAST:event_btnGuardarActionPerformed
+
+    private void cbx_notaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbx_notaActionPerformed
+        // TODO add your handling code here:
+
+        try {
+            Connection cn = DriverManager.getConnection(BD, Usuario, Clave);
+            PreparedStatement pst = cn.prepareStatement("select id_tipo from tipo_notas where nombre_tipo=?");
+            pst.setString(1, cbx_nota.getSelectedItem().toString());
+
+            ResultSet rs = pst.executeQuery();
+
+            //llenar combobox para el comentaario
+            //cbx_facultad.addItem("Facultad");
+            if (rs.next()) {
+                lblTipo.setText(rs.getString("id_tipo"));
+            }
+
+            //rs.close();
+        } catch (Exception e) {
+
+        }
+    }//GEN-LAST:event_cbx_notaActionPerformed
+
+    private void cbx_alumnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbx_alumnoActionPerformed
+        // TODO add your handling code here:
+
+    }//GEN-LAST:event_cbx_alumnoActionPerformed
+
+    private void btnSiguienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSiguienteActionPerformed
+        // TODO add your handling code here:
+        carrera = cbx_carrera.getSelectedItem().toString();
+        sede = cbx_sede.getSelectedItem().toString();
+        jornada = cbx_jornada.getSelectedItem().toString();
+        seccion = cbx_seccion.getSelectedItem().toString();
+        aula = cbx_aula.getSelectedItem().toString();
+        curso = cbx_curso.getSelectedItem().toString();
+        cbx_alumno.removeAllItems();
+        CarnetAlumno();
+        
+
+    }//GEN-LAST:event_btnSiguienteActionPerformed
+
+    private void cbx_cursoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbx_cursoActionPerformed
+        // TODO add your handling code here:
+        try {
+            Connection cn = DriverManager.getConnection(BD, Usuario, Clave);
+            PreparedStatement pst = cn.prepareStatement("select nombre_curso from cursos where codigo_curso=?");
+            pst.setString(1, cbx_curso.getSelectedItem().toString());
+
+            ResultSet rs = pst.executeQuery();
+
+            //llenar combobox para el comentaario
+            //cbx_facultad.addItem("Facultad");
+            if (rs.next()) {
+                lbl_curso.setText(rs.getString("nombre_curso"));
+            }
+
+            //rs.close();
+        } catch (Exception e) {
+
+        }
+    }//GEN-LAST:event_cbx_cursoActionPerformed
+
+    private void cbx_aulaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbx_aulaActionPerformed
+        // TODO add your handling code here:
+        try {
+            Connection cn = DriverManager.getConnection(BD, Usuario, Clave);
+            PreparedStatement pst = cn.prepareStatement("select nombre_aula from aulas where codigo_aula=?");
+            pst.setString(1, cbx_aula.getSelectedItem().toString());
+
+            ResultSet rs = pst.executeQuery();
+
+            //llenar combobox para el comentaario
+            //cbx_facultad.addItem("Facultad");
+            if (rs.next()) {
+                lbl_aula.setText(rs.getString("nombre_aula"));
+            }
+
+            //rs.close();
+        } catch (Exception e) {
+
+        }
+    }//GEN-LAST:event_cbx_aulaActionPerformed
+
+    private void cbx_seccionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbx_seccionActionPerformed
+        // TODO add your handling code here:
+        try {
+            Connection cn = DriverManager.getConnection(BD, Usuario, Clave);
+            PreparedStatement pst = cn.prepareStatement("select nombre_seccion from secciones where codigo_seccion=?");
+            pst.setString(1, cbx_seccion.getSelectedItem().toString());
+
+            ResultSet rs = pst.executeQuery();
+
+            //llenar combobox para el comentaario
+            //cbx_facultad.addItem("Facultad");
+            if (rs.next()) {
+                lbl_seccion.setText(rs.getString("nombre_seccion"));
+            }
+
+            //rs.close();
+        } catch (Exception e) {
+
+        }
+    }//GEN-LAST:event_cbx_seccionActionPerformed
+
+    private void cbx_jornadaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbx_jornadaActionPerformed
+        // TODO add your handling code here:
+        try {
+            Connection cn = DriverManager.getConnection(BD, Usuario, Clave);
+            PreparedStatement pst = cn.prepareStatement("select nombre_jornada from jornadas where codigo_jornada=?");
+            pst.setString(1, cbx_jornada.getSelectedItem().toString());
+
+            ResultSet rs = pst.executeQuery();
+
+            //llenar combobox para el comentaario
+            //cbx_facultad.addItem("Facultad");
+            if (rs.next()) {
+                lbl_jornada.setText(rs.getString("nombre_jornada"));
+            }
+
+            //rs.close();
+        } catch (Exception e) {
+
+        }
+    }//GEN-LAST:event_cbx_jornadaActionPerformed
+
+    private void cbx_carreraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbx_carreraActionPerformed
+        // TODO add your handling code here:
+
+        try {
+            Connection cn = DriverManager.getConnection(BD, Usuario, Clave);
+            PreparedStatement pst = cn.prepareStatement("select nombre_carrera from carreras where codigo_carrera=?");
+            pst.setString(1, cbx_carrera.getSelectedItem().toString());
+
+            ResultSet rs = pst.executeQuery();
+
+            //llenar combobox para el comentaario
+            //cbx_facultad.addItem("Facultad");
+            if (rs.next()) {
+                lblCarrera.setText(rs.getString("nombre_carrera"));
+            }
+
+            //rs.close();
+        } catch (Exception e) {
+
+        }
+    }//GEN-LAST:event_cbx_carreraActionPerformed
+
+    private void cbx_sedeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbx_sedeActionPerformed
+        // TODO add your handling code here:
+        try {
+            Connection cn = DriverManager.getConnection(BD, Usuario, Clave);
+            PreparedStatement pst = cn.prepareStatement("select nombre_sede from sedes where codigo_sede=?");
+            pst.setString(1, cbx_sede.getSelectedItem().toString());
+
+            ResultSet rs = pst.executeQuery();
+
+            //llenar combobox para el comentaario
+            //cbx_facultad.addItem("Facultad");
+            if (rs.next()) {
+                lblSede.setText(rs.getString("nombre_sede"));
+            }
+
+            //rs.close();
+        } catch (Exception e) {
+
+        }
+    }//GEN-LAST:event_cbx_sedeActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        cbx_carrera.removeAllItems();
+        cbx_sede.removeAllItems();
+        cbx_jornada.removeAllItems();
+        cbx_seccion.removeAllItems();
+        cbx_aula.removeAllItems();
+        cbx_curso.removeAllItems();
+        cbx_nota.removeAllItems();
+        Carrera();
+        Sede();
+        Jornada();
+        Seccion();
+        Aula();
+        Curso();
+        tipo_nota();
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void txtCodigoMaestroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCodigoMaestroActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtCodigoMaestroActionPerformed
 
     private void Carrera() {
         try {
@@ -398,7 +694,6 @@ public class Ingreso_Notas extends javax.swing.JInternalFrame {
         }
     }
 
-
     private void CarnetAlumno() {
 
         try {
@@ -413,21 +708,19 @@ public class Ingreso_Notas extends javax.swing.JInternalFrame {
             cbx_alumno.addItem("Carnet Alumno");
 
             while (rs.next()) {
-                
+
                 cbx_alumno.addItem(rs.getString("carnet_alumno"));
-                
+
             }
-            
+
             //removeDuplicates(cbx_alumno);
-            
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "No existe alumno asignado a este curso.");
         }
     }
-    
-   
-    public void tipo_nota(){
-    
+
+    public void tipo_nota() {
+
         try {
             Connection cn = DriverManager.getConnection(BD, Usuario, Clave);
             PreparedStatement pst = cn.prepareStatement("select nombre_tipo from tipo_notas;");
@@ -446,271 +739,12 @@ public class Ingreso_Notas extends javax.swing.JInternalFrame {
         } catch (Exception e) {
 
         }
-    
-    
+
     }
-    private void txtCodigoMaestroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCodigoMaestroActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtCodigoMaestroActionPerformed
-
-    private void cbx_carreraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbx_carreraActionPerformed
-        // TODO add your handling code here:
-
-        try {
-            Connection cn = DriverManager.getConnection(BD, Usuario, Clave);
-            PreparedStatement pst = cn.prepareStatement("select nombre_carrera from carreras where codigo_carrera=?");
-            pst.setString(1, cbx_carrera.getSelectedItem().toString());
-
-            ResultSet rs = pst.executeQuery();
-
-            //llenar combobox para el comentaario
-            //cbx_facultad.addItem("Facultad");
-            if (rs.next()) {
-                lblCarrera.setText(rs.getString("nombre_carrera"));
-            }
-
-            //rs.close();
-        } catch (Exception e) {
-
-        }
-    }//GEN-LAST:event_cbx_carreraActionPerformed
-
-
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-        cbx_carrera.removeAllItems();
-        cbx_sede.removeAllItems();
-        cbx_jornada.removeAllItems();
-        cbx_seccion.removeAllItems();
-        cbx_aula.removeAllItems();
-        cbx_curso.removeAllItems();
-        cbx_nota.removeAllItems();
-        Carrera();
-        Sede();
-        Jornada();
-        Seccion();
-        Aula();
-        Curso();
-        tipo_nota();
-    }//GEN-LAST:event_jButton1ActionPerformed
-
-    private void cbx_sedeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbx_sedeActionPerformed
-        // TODO add your handling code here:
-        try {
-            Connection cn = DriverManager.getConnection(BD, Usuario, Clave);
-            PreparedStatement pst = cn.prepareStatement("select nombre_sede from sedes where codigo_sede=?");
-            pst.setString(1, cbx_sede.getSelectedItem().toString());
-
-            ResultSet rs = pst.executeQuery();
-
-            //llenar combobox para el comentaario
-            //cbx_facultad.addItem("Facultad");
-            if (rs.next()) {
-                lblSede.setText(rs.getString("nombre_sede"));
-            }
-
-            //rs.close();
-        } catch (Exception e) {
-
-        }
-    }//GEN-LAST:event_cbx_sedeActionPerformed
-
-    private void cbx_jornadaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbx_jornadaActionPerformed
-        // TODO add your handling code here:
-        try {
-            Connection cn = DriverManager.getConnection(BD, Usuario, Clave);
-            PreparedStatement pst = cn.prepareStatement("select nombre_jornada from jornadas where codigo_jornada=?");
-            pst.setString(1, cbx_jornada.getSelectedItem().toString());
-
-            ResultSet rs = pst.executeQuery();
-
-            //llenar combobox para el comentaario
-            //cbx_facultad.addItem("Facultad");
-            if (rs.next()) {
-                lbl_jornada.setText(rs.getString("nombre_jornada"));
-            }
-
-            //rs.close();
-        } catch (Exception e) {
-
-        }
-    }//GEN-LAST:event_cbx_jornadaActionPerformed
-
-    private void cbx_seccionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbx_seccionActionPerformed
-        // TODO add your handling code here:
-        try {
-            Connection cn = DriverManager.getConnection(BD, Usuario, Clave);
-            PreparedStatement pst = cn.prepareStatement("select nombre_seccion from secciones where codigo_seccion=?");
-            pst.setString(1, cbx_seccion.getSelectedItem().toString());
-
-            ResultSet rs = pst.executeQuery();
-
-            //llenar combobox para el comentaario
-            //cbx_facultad.addItem("Facultad");
-            if (rs.next()) {
-                lbl_seccion.setText(rs.getString("nombre_seccion"));
-            }
-
-            //rs.close();
-        } catch (Exception e) {
-
-        }
-    }//GEN-LAST:event_cbx_seccionActionPerformed
-
-    private void cbx_aulaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbx_aulaActionPerformed
-        // TODO add your handling code here:
-        try {
-            Connection cn = DriverManager.getConnection(BD, Usuario, Clave);
-            PreparedStatement pst = cn.prepareStatement("select nombre_aula from aulas where codigo_aula=?");
-            pst.setString(1, cbx_aula.getSelectedItem().toString());
-
-            ResultSet rs = pst.executeQuery();
-
-            //llenar combobox para el comentaario
-            //cbx_facultad.addItem("Facultad");
-            if (rs.next()) {
-                lbl_aula.setText(rs.getString("nombre_aula"));
-            }
-
-            //rs.close();
-        } catch (Exception e) {
-
-        }
-    }//GEN-LAST:event_cbx_aulaActionPerformed
-
-    private void cbx_cursoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbx_cursoActionPerformed
-        // TODO add your handling code here:
-        try {
-            Connection cn = DriverManager.getConnection(BD, Usuario, Clave);
-            PreparedStatement pst = cn.prepareStatement("select nombre_curso from cursos where codigo_curso=?");
-            pst.setString(1, cbx_curso.getSelectedItem().toString());
-
-            ResultSet rs = pst.executeQuery();
-
-            //llenar combobox para el comentaario
-            //cbx_facultad.addItem("Facultad");
-            if (rs.next()) {
-                lbl_curso.setText(rs.getString("nombre_curso"));
-            }
-
-            //rs.close();
-        } catch (Exception e) {
-
-        }
-    }//GEN-LAST:event_cbx_cursoActionPerformed
-
-    private void btnSiguienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSiguienteActionPerformed
-        // TODO add your handling code here:
-        carrera = cbx_carrera.getSelectedItem().toString();
-        sede = cbx_sede.getSelectedItem().toString();
-        jornada = cbx_jornada.getSelectedItem().toString();
-        seccion = cbx_seccion.getSelectedItem().toString();
-        aula = cbx_aula.getSelectedItem().toString();
-        curso = cbx_curso.getSelectedItem().toString();
-        cbx_alumno.removeAllItems();
-        CarnetAlumno();
-
-
-    }//GEN-LAST:event_btnSiguienteActionPerformed
-
-    private void cbx_alumnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbx_alumnoActionPerformed
-        // TODO add your handling code here:
-
-
-    }//GEN-LAST:event_cbx_alumnoActionPerformed
-
-    private void cbx_notaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbx_notaActionPerformed
-        // TODO add your handling code here:
-        
-        try {
-            Connection cn = DriverManager.getConnection(BD, Usuario, Clave);
-            PreparedStatement pst = cn.prepareStatement("select id_tipo from tipo_notas where nombre_tipo=?");
-            pst.setString(1, cbx_nota.getSelectedItem().toString());
-
-            ResultSet rs = pst.executeQuery();
-
-            //llenar combobox para el comentaario
-            //cbx_facultad.addItem("Facultad");
-            if (rs.next()) {
-                lblTipo.setText(rs.getString("id_tipo"));
-            }
-
-            //rs.close();
-        } catch (Exception e) {
-
-        }
-
-    }//GEN-LAST:event_cbx_notaActionPerformed
-
-    private void btnGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarActionPerformed
-        // TODO add your handling code here:
-
-        try {
-            Connection cn = DriverManager.getConnection(BD, Usuario, Clave);
-            String ID = cbx_alumno.getSelectedItem().toString();
-            PreparedStatement pst1 = cn.prepareStatement("select tipo_nota from asignacioncursosalumnos where carnet_alumno = " + ID);
-            ResultSet rss4 = pst1.executeQuery();
-
-            if (rss4.next()) {
-                String  vacio = rss4.getString("tipo_nota");
-                if (vacio == "0") {
-                    PreparedStatement pst2 = cn.prepareStatement("update asignacioncursosalumnos set tipo_nota = ?, nota_asignacioncursoalumnos = ? where carnet_alumno = " + ID);
-
-                    pst2.setString(1, cbx_nota.getSelectedItem().toString());
-                    pst2.setString(2, txtNota.getText().trim());
-
-                    pst2.executeUpdate();
-
-                    JOptionPane.showMessageDialog(null, "GUARDADO CON EXITO!");
-
-                } 
-                else if(vacio == "Extraordinario1"){
-                    String ID2 = cbx_nota.getSelectedItem().toString();
-                    PreparedStatement pst2 = cn.prepareStatement("update asignacioncursosalumnos set nota_asignacioncursoalumnos = ? where carnet_alumno = " + ID + " and tipo_nota = " + ID2);
-
-                    pst2.setString(1, cbx_nota.getSelectedItem().toString());
-                    pst2.setString(2, txtNota.getText().trim());
-
-                    pst2.executeUpdate();
-
-                    JOptionPane.showMessageDialog(null, "GUARDADO CON EXITO!");
-                
-                
-                }
-                else {
-                    PreparedStatement pst = cn.prepareStatement("insert into asignacioncursosalumnos values(?,?,?,?,?,?,?,?,?)");
-
-                    
-                    pst.setString(1, cbx_carrera.getSelectedItem().toString());
-                    pst.setString(2, cbx_sede.getSelectedItem().toString());
-                    pst.setString(3, cbx_jornada.getSelectedItem().toString());
-                    pst.setString(4, cbx_seccion.getSelectedItem().toString());
-                    pst.setString(5, cbx_aula.getSelectedItem().toString());
-                    pst.setString(6, cbx_curso.getSelectedItem().toString());
-                    pst.setString(7, cbx_alumno.getSelectedItem().toString());
-                    pst.setString(8, cbx_nota.getSelectedItem().toString());
-                    pst.setString(9, txtNota.getText().trim());
-                    pst.executeUpdate();
-
-                    JOptionPane.showMessageDialog(null, "GUARDADO CON EXITO!");
-                }
-
-            }
-        } catch (Exception e) {
-             System.out.println(e);   
-        }
-
-        try {
-            Connection cn = DriverManager.getConnection(BD, Usuario, Clave);
-            String ID = cbx_alumno.getSelectedItem().toString();
-
-        } catch (Exception e) {
-
-        }
-    }//GEN-LAST:event_btnGuardarActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTabbedPane Panel;
     private javax.swing.JButton btnGuardar;
     private javax.swing.JButton btnSiguiente;
     private javax.swing.JComboBox<String> cbx_alumno;
@@ -736,9 +770,8 @@ public class Ingreso_Notas extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JTabbedPane jTabbedPane1;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTextArea jTextArea1;
     private javax.swing.JLabel lblCarrera;
     private javax.swing.JLabel lblSede;
     private javax.swing.JLabel lblTipo;
@@ -746,6 +779,8 @@ public class Ingreso_Notas extends javax.swing.JInternalFrame {
     private javax.swing.JLabel lbl_curso;
     private javax.swing.JLabel lbl_jornada;
     private javax.swing.JLabel lbl_seccion;
+    private javax.swing.JPanel panel_maestro;
+    private javax.swing.JPanel panel_nota;
     private javax.swing.JTextField txtCodigoMaestro;
     private javax.swing.JTextField txtNota;
     // End of variables declaration//GEN-END:variables
